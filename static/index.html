@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "http://123.206.224.239:8080/visits";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        window.onload =function() {
+            $.ajax({
+                //url: "http://127.0.0.1:8080/visits",
+                url: "http://123.206.224.239:8080/visits",
+                async:true,
+                type:"GET",
+                dataType:"text"
+                // success:function(data){
+                //     alert(data);
+                // },
+                // error:function(){
+                //     alert("数据没有成功返回!")
+                // }
+            });
+        };
+    </script>
+
+
+
+    <script type="text/javascript">
+
+        window.onload =function() {
+            $.ajax({
+                url: "http://127.0.0.1:8080/visits",
+                //url: "http://123.206.224.239:8080/visits",
+                async:true,
+                type:"GET",
+                dataType:"text"
+                // success:function(data){
+                //     alert(data);
+                // },
+                // error:function(){
+                //     alert("数据没有成功返回!")
+                // }
+            })
+        };
+        // function sendRequest(){
+        //     $.ajax({
+        //         //url: "http://127.0.0.1:8080/visits",
+        //         url: "http://127.0.0.1:8080/visits",
+        //         async:true,
+        //         type:"GET",
+        //         dataType:"text"
+        //         // success:function(data){
+        //         //     alert(data);
+        //         // },
+        //         // error:function(){
+        //         //     alert("数据没有成功返回!")
+        //         // }
+        //     });
+        // }
+    </script>
+</head>
+<body>
+<input type="button" value="aaa" onclick="sendRequest()">
+</body>
+</html>
